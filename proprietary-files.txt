@@ -24,8 +24,8 @@ system/lib64/libmorpho_panorama_gp3.so
 system/lib64/libmorpho_sensor_fusion.so
 
 # Permission
-etc/default-permissions/miuicamera-permissions.xml
-etc/permissions/privapp-permissions-miuicamera.xml
+etc/default-permissions/miuicamera-permissions.xml|74e9d10a00e9ef4ba0ff46020b9eb4667585d35f
+etc/permissions/privapp-permissions-miuicamera.xml|56a1210541f129703a946ec4216f4374644e62e7
 
 # Fonts
 vendor/camera/fonts/MFYueYuan-Regular.ttf
