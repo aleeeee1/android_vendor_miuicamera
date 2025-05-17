@@ -240,10 +240,10 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libjni_arcsoft_beautyshot.so"],
-			shared_libs: ["libarcsoft_beautyshot", "libmpbase", "liblog", "libandroid", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 }
 
