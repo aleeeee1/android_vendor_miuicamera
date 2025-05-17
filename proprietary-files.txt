@@ -12,7 +12,7 @@ system/lib64/libarcsoft_wideselfie.so
 system/lib64/libcamera_arcsoft_beautyshot.so;FIX_SONAME
 system/lib64/libcamera_arcsoft_handgesture.so
 system/lib64/libcamera_beauty_mpbase.so;FIX_SONAME
-system/lib64/libcamera_handgesture_mpbase.so;FIX_SONAME
+system/lib64/libcamera_handgesture_mpbase.so|569edc73fb13ea4343b4d4686101464d8d039ca8
 system/lib64/libcamera_wideselfie_mpbase.so;FIX_SONAME
 system/lib64/libcom.xiaomi.camera.requestutil.so
 system/lib64/libhandengine.arcsoft.so
