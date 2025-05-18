@@ -36,6 +36,12 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"vendor/xiaomi/laurel_sprout",
+EOF
+}
+
 # Initialize the helper
 setup_vendor "$MIUICAMERA_COMMON" "$VENDOR" "$ROOT" true
 
