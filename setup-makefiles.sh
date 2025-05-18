@@ -42,6 +42,24 @@ function vendor_imports() {
 EOF
 }
 
+function lib_to_package_fixup_vendor_variants() {
+    case "$1" in
+        libmpbase | \
+        libOpenCL)
+            echo "$1_system"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+function lib_to_package_fixup() {
+    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+    lib_to_package_fixup_proto_3_9_1 "$1" ||
+    lib_to_package_fixup_vendor_variants "$@"
+}
+
 # Initialize the helper
 setup_vendor "$MIUICAMERA_COMMON" "$VENDOR" "$ROOT" true
 

@@ -9,6 +9,27 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+	name: "libOpenCL_system",
+	stem: "libOpenCL",
+	owner: "miuicamera",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system/lib/libOpenCL.so"],
+			shared_libs: ["libcutils", "libvndksupport", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system/lib64/libOpenCL.so"],
+			shared_libs: ["libcutils", "libvndksupport", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libcom.xiaomi.camera.requestutil",
 	owner: "miuicamera",
 	strip: {
@@ -89,6 +110,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libmpbase_system",
+	stem: "libmpbase",
+	owner: "miuicamera",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system/lib/libmpbase.so"],
+			shared_libs: ["libc", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system/lib64/libmpbase.so"],
+			shared_libs: ["libc", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libCameraEffectJNI",
 	owner: "miuicamera",
 	strip: {
@@ -129,7 +171,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libarcsoft_wideselfie.so"],
-			shared_libs: ["libmpbase", "liblog", "libdl", "libc", "libm", ],
+			shared_libs: ["libmpbase_system", "liblog", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "64",
@@ -145,7 +187,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libcamera_arcsoft_beautyshot.so"],
-			shared_libs: ["libmpbase", "liblog", "libc", "libm", "libdl", ],
+			shared_libs: ["libmpbase_system", "liblog", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -161,7 +203,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libcamera_arcsoft_handgesture.so"],
-			shared_libs: ["libarc_layer_sgl", "libhandengine.arcsoft", "libmpbase", "liblog", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libarc_layer_sgl", "libhandengine.arcsoft", "libmpbase_system", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -225,7 +267,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libhandengine.arcsoft.so"],
-			shared_libs: ["libmpbase", "libarc_layer_sgl", "liblog", "libOpenCL", "libc", "libm", "libdl", ],
+			shared_libs: ["libmpbase_system", "libarc_layer_sgl", "liblog", "libOpenCL_system", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -257,7 +299,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system/lib64/libjni_wideselfie.so"],
-			shared_libs: ["libmpbase", "libarcsoft_wideselfie", "libjnigraphics", "liblog", "libandroid", "libc", "libm", "libstdc++", "libdl", ],
+			shared_libs: ["libmpbase_system", "libarcsoft_wideselfie", "libjnigraphics", "liblog", "libandroid", "libc", "libm", "libstdc++", "libdl", ],
 		},
 	},
 	compile_multilib: "64",

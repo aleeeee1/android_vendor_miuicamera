@@ -14,10 +14,12 @@ PRODUCT_COPY_FILES += \
     vendor/miuicamera/common/proprietary/vendor/etc/camera/beauty_ui9_intelligent_params.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_ui9_intelligent_params.config
 
 PRODUCT_PACKAGES += \
+    libOpenCL_system \
     libcom.xiaomi.camera.requestutil \
     libjni_jpegutil_xiaomi \
     libmorpho_memory_allocator \
     libmorpho_sensor_fusion \
+    libmpbase_system \
     libCameraEffectJNI \
     libarc_layer_sgl \
     libarcsoft_wideselfie \
